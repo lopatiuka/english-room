@@ -1,0 +1,18 @@
+.user-card {
+
+    .image {
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 2px solid transparent;
+
+            &.asking {
+                border-color: rgb(21, 84, 244);
+            }
+        }
+    }
+
+    .name {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,17 @@
+<div class="container">
+    <div mat-dialog-content>
+        <h3>To enter to the room you need to enter name</h3>
+        <mat-form-field>
+            <input matInput type="text" [formControl]="nameControl">
+            <mat-error *ngIf="data && data.maxLengthError">Sorry only 3 users allowed in the room</mat-error>
+        </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+        <button 
+        mat-raised-button 
+        color="primary" 
+        [disabled]="!nameControl.valid || (data && data.maxLengthError)"
+        (click)="close()">Enter Room</button>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="users">
+        <app-user-card *ngFor="let user of users$ | async | keyvalue" [user]="user.value" [currentAskingId]="currentUser ? currentUser.id : ''"></app-user-card>
+    </div>
+
+    <div *ngIf="currentUser">
+        <p>{{currentUser.name}} is asking</p>
+    </div>
+
+    <button mat-flat-button color="primary" (click)="nextUser()">{{currentUser ? 'Next' : 'Start asking'}}</button></div>
